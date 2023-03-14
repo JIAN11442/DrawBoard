@@ -1,0 +1,191 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.block {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    /* rgb(205, 179, 128),
+    rgb(232, 221, 203), */ rgb(3, 101, 100),
+    rgb(3, 54, 73),
+    rgb(3, 22, 52)
+  );
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: rgba(240, 248, 255, 0.4);
+  width: 700px;
+  /* position: relative; */
+  margin-top: 30px;
+  padding: 30px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-settings {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* padding-bottom: 20px; */
+  /* border-bottom: solid 1px rgba(255, 255, 255, 0.5); */
+  /* align-items: center; */
+  /* background-color: aliceblue; */
+}
+
+.operation-settings .range-settings {
+  width: 45%;
+  /* background-color: red; */
+}
+
+.operation-settings .button-submit {
+  width: 40%;
+  /* background-color: blue; */
+}
+
+.operation-settings .range-settings .width-range label,
+.operation-settings .range-settings .height-range label,
+.operation-settings .color-range label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.operation-settings .range-settings .width-range .input-width-settings,
+.operation-settings .range-settings .height-range .input-height-settings,
+.operation-settings .color-range .color-range-settings {
+  display: flex;
+  /* background: #000; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operation-settings .range-settings input[type="range"] {
+  width: 70%;
+}
+
+.operation-settings .range-settings input[type="text"] {
+  font-size: 15px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.operation-settings .button-submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.operation-settings .button-submit .create-btn,
+.operation-settings .button-submit .process-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-settings .button-submit button {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+}
+
+.operation-settings .button-submit .process-btn .paint-btn {
+  margin-bottom: 0px;
+}
+
+.operation-settings .button-submit button:hover {
+  background-color: darkslategray;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  transition: ease 0.2s;
+  /* transform: scale(0.96); */
+}
+
+.operation-settings .button-submit button:focus {
+  transform: scale(0.96);
+  filter: drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.7));
+  transition: ease 0.5;
+}
+
+/* .operation-settings .button-submit .create-btn .create-grid,
+.operation-settings .button-submit .process-btn .erase-btn {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+}
+
+.operation-settings .button-submit .create-btn .clear-grid,
+.operation-settings .button-submit .process-btn .paint-btn {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+} */
+
+.operation-settings .color-range .color-range-settings {
+  margin-top: 10px;
+}
+
+.operation-settings .color-range .color-range-settings input[type="color"] {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 40%;
+  height: 50px;
+}
+
+.operation-settings
+  .color-range
+  .color-range-settings
+  input[type="color"]::-webkit-color-swatch {
+  border-radius: 25px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.operation-settings
+  .color-range
+  .color-range-settings
+  input[type="color"]::-webkit-color-swatch:focus {
+  filter: drop-shadow(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.operation-settings .color-range .color-range-settings input[type="text"] {
+  width: 50%;
+}
+
+.container {
+  width: 95%;
+  margin-top: 30px;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .gridRow {
+  display: flex;
+}
+.container .gridRow .gridCol {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-collapse: collapse;
+}

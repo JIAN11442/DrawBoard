@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>GridDraw | Jian</title>
+  </head>
+  <body>
+    <div class="block">
+      <div class="wrapper">
+        <div class="operation-settings">
+          <div class="range-settings">
+            <div class="width-range">
+              <label for="input-width-range">Grid-Width</label>
+              <div class="input-width-settings">
+                <input type="range" id="input-width-range" min="1" max="100" />
+                <input
+                  type="text"
+                  id="input-width-value"
+                  maxlength="3"
+                  onkeypress="KeyPressFocus(event,'input-height-value',undefined)"
+                />
+              </div>
+            </div>
+            <div class="height-range">
+              <label for="input-height-range">Grid-Height</label>
+              <div class="input-height-settings">
+                <input type="range" id="input-height-range" min="1" max="100" />
+                <input
+                  type="text"
+                  id="input-height-value"
+                  onkeypress="KeyPressFocus(event,'input-color-value','input-width-value')"
+                />
+              </div>
+            </div>
+            <div class="color-range">
+              <label for="input-color-range">Color Range</label>
+              <div class="color-range-settings">
+                <input type="color" id="input-color-range" />
+                <input
+                  type="text"
+                  id="input-color-value"
+                  onkeypress="KeyPressFocus(event,undefined,'input-height-value')"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="button-submit">
+            <div class="create-btn">
+              <button class="create-grid">Create Grid</button>
+              <button class="clear-grid">Clear Grid</button>
+            </div>
+            <div class="process-btn">
+              <button class="erase-btn">Erase</button>
+              <button class="paint-btn">Paint</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
